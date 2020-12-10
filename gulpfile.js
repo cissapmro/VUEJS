@@ -11,6 +11,10 @@ function vue() {
     return src('node_modules/vue/dist/vue.min.js')
     .pipe(dest('public/assets/js/'));
 }
+function vuerouter() {
+    return src('node_modules/vue-router/dist/vue-router.min.js')
+    .pipe(dest('public/assets/js/'));
+}
 function js() {
     return src('src/js/index.js')
     .pipe(named())
@@ -47,4 +51,4 @@ function js() {
     }))
     .pipe(dest("public/assets/js/"));
 }
-exports.default = parallel(html, vue, js);
+exports.default = parallel(html, vue, vuerouter, js);
