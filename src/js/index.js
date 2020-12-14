@@ -1,11 +1,16 @@
-import App from './App.vue';
+import App from './App.vue'
 import Home from './Home.vue';
 import Sobre from './Sobre.vue';
+import User from './User.vue';
+import NotFound from './NotFound.vue';
 
 const router = new VueRouter({
     routes:[
-        { path:'/', component:Home },
-        { path:'/sobre', component:Sobre }
+        { path:'/',component:Home },
+        { path:'/sobre',component:Sobre },
+        { path:'/user/:id',component:User },
+        { path:'*',component:NotFound }
+        
     ]
 });
 
